@@ -1,5 +1,5 @@
 import Post from '../Components/Post/Post';
-
+import { Text, View, ScrollView } from 'react-native';
 
 const Home = () => {
 //   var count = prompt("Enter the post count!")
@@ -9,11 +9,15 @@ const Home = () => {
   for (let index = 0; index < 100; index++) {
     rows.push(<Post num={index} key={index}/>)
   }
+
   return (
-    <div className="Home">
-        <h1>Home</h1>
-      {rows}
-    </div>
+    <View style={{flex: 1}}>
+      <ScrollView>
+            <Text>Home!</Text>
+            <h1>Home</h1>
+            {rows}
+      </ScrollView>
+    </View>
   );
   };
   

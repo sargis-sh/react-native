@@ -1,4 +1,5 @@
 import Post from '../Components/Post/Post';
+import { Text, View } from 'react-native';
 
 const profile = {
     id: 1,
@@ -13,11 +14,12 @@ const Profile = () => {
         rows.push(<Post num={index} key={index}/>)}
     }
     return(
-        <>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text>Profile</Text>
             <h1>Profile</h1>
             <h2>{profile.username}</h2>
             {rows}
-        </>
+        </View>
     );
 };
   

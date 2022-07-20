@@ -1,4 +1,5 @@
 import Post from '../Components/Post/Post';
+import { Text, View, ScrollView } from 'react-native';
 
 const profile = {
     id: 1,
@@ -13,10 +14,14 @@ const Following = () => {
         rows.push(<Post num={index} key={index}/>)}
     }
     return(
-        <>
-        <h1>Following</h1>
-        {rows}
-        </>
+        <View style={{ flex: 1}}>
+            <ScrollView>
+                <Text>Following!</Text>
+                <h1>Following</h1>
+                <h2>{profile.username}</h2>
+                {rows}
+            </ScrollView>
+        </View>
     )
   };
   

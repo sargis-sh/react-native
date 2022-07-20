@@ -30,10 +30,10 @@ function Post(num) {
     }, []);
     if(isLoading){
         return(
-            <Stack spacing={1}>
+            <Stack spacing={1} className="Post">
                 <Skeleton variant="text" />
-                <Skeleton variant="circular" width={40} height={40} />
-                <Skeleton variant="rectangular" width={210} height={118} />
+                <Skeleton variant="text" />
+                <Skeleton variant="text" />
             </Stack>
         );
     }
