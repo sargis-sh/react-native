@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import './App.css';
+import Home from "./Pages/Home";
+import Profile from "./Pages/Profile";
+import Following from "./Pages/Following";
+import Discover from "./Pages/Discover";
+import NoPage from "./Pages/NoPage";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  return(
+    <h1>App JS!</h1>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
