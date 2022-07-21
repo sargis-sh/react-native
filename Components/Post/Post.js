@@ -7,17 +7,25 @@ import Stack from '@mui/material/Stack';
 
 function Post(num) {
     const [isLoading, SetIsLoading] = useState(true);
-    const [postTitle, setPostTitle] = useState();
-    const [postAuthor, setPostAuthor] = useState();
-    const [postBody, setPostBody] = useState();
+    const [animeName, setAnimeName] = useState();
+    const [animeImage, setAnimeImage] = useState();
+    const [animeDescription, setAnimeDescription] = useState();
+    const [animeRating, setAnimeRating] = useState();
+    // const [animeImage, setAnimeImage] = useState();
     useEffect(() => {
         try{
         const getData = async () => {
-            let postHREF = await json.get('/posts');
-            let postResult = postHREF.data;
-            setPostTitle(postResult[num.num].id);
-            setPostAuthor(postResult[num.num].title);
-            setPostBody(postResult[num.num].body);
+            let postHREF = await json.get('/anime');
+            
+            let postResult = postHREF.data.data[num.num].attributes;
+            console.log(postResult);
+            setAnimeImage(postResult.posterImage.large);
+            setAnimeName(postResult.canonicalTitle);
+            setAnimeDescription(postResult.description);
+            setAnimeRating(postResult.ageRatingGuide);
+        //     setPostTitle(postResult);
+        //     setPostAuthor(postResult[num.num].title);
+        //     setPostBody(postResult[num.num].body);
         }
         getData();
         }
@@ -40,9 +48,10 @@ function Post(num) {
     else{
     return (  
     <div className="Post">
-        <h1>{postTitle}</h1>
-        <h2>{postAuthor}</h2>
-        <p>{postBody}</p>
+        <h1>{animeName}</h1>
+        <img src={animeImage}/>
+        <h2>{animeRating}</h2>
+        <p>{animeDescription}</p>
     </div>
     );
     }

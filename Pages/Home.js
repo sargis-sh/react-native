@@ -6,7 +6,7 @@ const Home = () => {
 //   parseFloat(count);
   var rows = [];
   console.log(rows)
-  for (let index = 0; index < 100; index++) {
+  for (let index = 0; index < 10; index++) {
     rows.push(<Post num={index} key={index}/>)
   }
 

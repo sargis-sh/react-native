@@ -1,0 +1,1 @@
+{"ast":null,"code":"","map":{"version":3,"names":[],"sources":["/Users/user/Desktop/react-native/Helpers/Helper.js"],"sourcesContent":["// import axios from 'axios';\n\n// const json = axios.create({\n//     baseURL: 'https://jsonplaceholder.typicode.com/',\n// });\n\n// export default json;"],"mappings":""},"metadata":{},"sourceType":"script"}
